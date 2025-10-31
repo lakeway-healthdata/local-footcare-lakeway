@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Advanced Podiatric Solutions – Lakeway, TX</title>
+    <meta
+      content="Specialized podiatric treatments and foot care solutions in Lakeway, TX. Offering comprehensive ankle and foot services, diabetic wound management, athletic rehabilitation, and innovative treatment methods."
+      name="description"
+    />
+    <meta name="google-site-verification" content="" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #1a1a2e;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background: #2d3561;
+        color: #f0f0f0;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #f0f0f0;
+        margin: 0;
+      }
+
+      .sponsor-line {
+        font-size: 0.8rem;
+        color: #b8b8c8;
+        font-style: italic;
+        margin-top: 2px;
+      }
+
+      .header-contact {
+        display: none;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            rgba(139, 69, 190, 0.93),
+            rgba(107, 33, 168, 0.93)
+          ),
+          linear-gradient(45deg, #8b45be, #6b21a8);
+        color: white;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+      }
+
+      .hero .description {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: #8b45be;
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(139, 69, 190, 0.3);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        background: #6b21a8;
+        box-shadow: 0 6px 20px rgba(139, 69, 190, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: #8b45be;
+      }
+
+      /* Trust Indicators */
+      .trust-section {
+        background: white;
+        padding: 40px 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .trust-indicators {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+
+      .trust-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .trust-item i {
+        font-size: 2.5rem;
+        color: #8b45be;
+      }
+
+      .trust-item h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
+
+      .trust-item p {
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+
+      /* Services Section */
+      .services {
+        padding: 80px 0;
+        background: #faf9fc;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card i {
+        font-size: 3rem;
+        color: #8b45be;
+        margin-bottom: 20px;
+      }
+
+      .service-card h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin-bottom: 15px;
+      }
+
+      .service-card p {
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      .service-card .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+
+      /* Why Choose Us */
+      .why-choose {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .feature-item {
+        text-align: center;
+      }
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: #8b45be;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .feature-icon i {
+        font-size: 2rem;
+        color: white;
+      }
+
+      .feature-item h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin-bottom: 15px;
+      }
+
+      /* Emergency Section */
+      .emergency {
+        background: #8b45be;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .emergency h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .emergency p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .emergency-phone {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .emergency-phone:hover {
+        background: #6b21a8;
+        transform: scale(1.05);
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background: #2d3561;
+        color: #f0f0f0;
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-section h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #f0f0f0;
+        margin-bottom: 20px;
+      }
+
+      .footer-section p,
+      .footer-section li {
+        color: #c8c8d8;
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section a {
+        color: #c8c8d8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #8b45be;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #4a4f78;
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color: #c8c8d8;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .header-contact {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .emergency-phone {
+          font-size: 2rem;
+        }
+      }
+    </style>
+    <link href="https://example.com/" rel="canonical" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <p class="logo"><strong>Local Foot Care Center</strong></p>
+          </div>
+          <div class="header-contact"></div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Premium Podiatric Services for Lakeway Residents</h1>
+        <p class="subtitle">Professional Foot & Ankle Solutions</p>
+        <p class="description">
+          Seeking exceptional lower extremity medical attention in Lakeway? Our
+          certified podiatric physician delivers complete foot and ankle
+          therapeutic services designed for patients of every age and fitness
+          level.
+        </p>
+        <div class="cta-buttons">
+          <a class="btn btn-secondary" href="#contact">
+            <i class="fas fa-arrow-down"></i>
+            Discover More
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-indicators">
+          <div class="trust-item">
+            <i class="fas fa-user-md"></i>
+            <h3>Professionally Certified</h3>
+            <p>25+ years of practice</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Innovative Treatments</h3>
+            <p>Modern therapeutic options</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-home"></i>
+            <h3>Community Provider</h3>
+            <p>Lakeway, Texas</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-award"></i>
+            <h3>Superior Service</h3>
+            <p>Complete treatment options</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Complete Podiatric Service Offerings</h2>
+          <p>
+            Professional lower extremity treatments for every ailment impacting
+            your feet and ankles, spanning preventative maintenance to complex
+            surgical interventions.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-walking"></i>
+            <h3>Lower Extremity Discomfort Solutions</h3>
+            <p>
+              Complete assessment and intervention for plantar pain, midfoot
+              soreness, and ankle discomfort utilizing progressive treatment
+              modalities.
+            </p>
+            <a href="#" class="btn btn-primary">Pain Solutions</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-shoe-prints"></i>
+            <h3>Arch Support & Alignment</h3>
+            <p>
+              Biomechanical stabilization and structural realignment through
+              customized interventions, orthotic devices, and progressive
+              solutions like HyProCure.
+            </p>
+            <a href="#" class="btn btn-primary">Arch Support</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Diabetic Lower Limb Management</h3>
+            <p>
+              Dedicated diabetic lower extremity programs emphasizing
+              prevention, ulcer treatment, and thorough complication oversight.
+            </p>
+            <a href="#" class="btn btn-primary">Diabetic Care</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-running"></i>
+            <h3>Athletic Injury Recovery</h3>
+            <p>
+              Professional intervention for athletics-related lower extremity
+              trauma emphasizing swift healing and injury avoidance.
+            </p>
+            <a href="#" class="btn btn-primary">Sports Recovery</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-band-aid"></i>
+            <h3>Plantar Pain Management</h3>
+            <p>
+              Progressive intervention for fasciitis, calcaneal spurs, and
+              persistent heel discomfort employing state-of-the-art modalities.
+            </p>
+            <a href="#" class="btn btn-primary">Heel Solutions</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-magic"></i>
+            <h3>Light & Regenerative Modalities</h3>
+            <p>
+              Non-surgical interventions featuring MLS phototherapy and
+              platelet-rich plasma for enhanced recovery and discomfort
+              reduction.
+            </p>
+            <a href="#" class="btn btn-primary">Advanced Therapies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Sets Our Practice Apart</h2>
+          <p>
+            We integrate extensive clinical expertise with modern treatment
+            approaches to deliver outstanding podiatric outcomes.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Credentialed Podiatric Surgeon</h3>
+            <p>
+              Our physician holds Fellowship status with the American College of
+              Foot and Ankle Surgeons with over 25 years of clinical practice.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Progressive Methodologies</h3>
+            <p>
+              Contemporary innovations including phototherapy, biologics, and
+              minimally invasive operative approaches.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Patient-Focused Philosophy</h3>
+            <p>
+              Individualized therapeutic strategies centered on your unique
+              requirements and daily living objectives.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-family"></i>
+            </div>
+            <h3>Multi-Generational Acceptance</h3>
+            <p>
+              Thorough treatment for children through senior patients with
+              age-specific therapeutic protocols.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Location Section -->
+    <section class="why-choose" style="background: #faf9fc">
+      <div class="container">
+        <div class="section-title">
+          <h2>Providing Care to Lakeway & Neighboring Communities</h2>
+          <p>
+            Ideally positioned in Lakeway, Texas, delivering specialized
+            podiatric services throughout the greater Austin metropolitan
+            region.
+          </p>
+        </div>
+        <div style="text-align: center; margin-top: 40px">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Our Office Address</h3>
+            <p>
+              We serve patients from Lakeway, Austin, Cedar Park, Leander, Bee
+              Cave, West Lake Hills, and adjacent Central Texas communities.
+            </p>
+            <div style="margin-top: 25px">
+              <a class="btn btn-primary" href="#">
+                <i class="fas fa-directions"></i>
+                Navigation Assistance
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency" id="contact">
+      <div class="container">
+        <h2>Prepared for Professional Podiatric Treatment?</h2>
+        <p>
+          Our certified podiatric physician welcomes new patients seeking
+          thorough lower extremity medical services in Lakeway.
+        </p>
+        <a class="emergency-phone" href="#">Reserve Your Consultation</a>
+        <p>Dedicated podiatric expertise available when required</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Office Details</h3>
+            <p style="font-size: 0.9rem; color: #b8b8c8; font-style: italic">
+              [Your Practice Name]
+            </p>
+            <p style="margin-top: 15px">
+              <a href="#" style="color: #b8b8c8; font-size: 0.85rem"
+                >Privacy Notice</a
+              >
+              |
+              <a href="#" style="color: #b8b8c8; font-size: 0.85rem"
+                >Conditions</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Treatment Options</h3>
+            <ul>
+              <li><a href="#services">Lower Extremity Pain Solutions</a></li>
+              <li><a href="#services">Arch Support & Alignment</a></li>
+              <li><a href="#services">Diabetic Lower Limb Management</a></li>
+              <li><a href="#services">Athletic Injury Recovery</a></li>
+              <li><a href="#services">Plantar Pain Management</a></li>
+              <li><a href="#services">Advanced Therapies</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Schedule Visit</h3>
+            <p>
+              <strong>Podiatric Services:</strong><br />Online booking available
+            </p>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #b8b8c8">
+              Affiliated with major medical networks<br />Various insurance
+              providers accepted
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 [Your Practice Name]. All rights reserved. | DPM, FACFAS</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://example.com/",
+            "name": "Professional Podiatric Services Guide – Lakeway, TX",
+            "description": "Specialized podiatric treatments and foot care solutions in Lakeway, TX. Offering comprehensive ankle and foot services, diabetic wound management, athletic rehabilitation, and innovative treatment methods.",
+            "inLanguage": "en",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "[Your Practice Name]"
+            },
+            "potentialAction": {
+              "@type": "ViewAction",
+              "target": "#"
+            },
+            "mainEntity": {
+              "@id": "https://example.com/#business"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://example.com/#business",
+            "name": "[Your Practice Name]",
+            "description": "[Your Practice Name] provides specialized podiatric services. Offering diabetic lower extremity care, injury recovery, and progressive treatment methodologies with dedicated patient attention.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "[Street Address]",
+              "addressLocality": "Lakeway",
+              "addressRegion": "TX",
+              "postalCode": "78734",
+              "addressCountry": "US"
+            },
+            "telephone": "[Phone Number]",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
+                "opens": "07:30",
+                "closes": "16:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Wednesday",
+                "opens": "10:00",
+                "closes": "19:00"
+              }
+            ],
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 0.0,
+              "longitude": 0.0
+            },
+            "sameAs": ["#"]
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>
